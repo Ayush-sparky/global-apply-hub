@@ -1,4 +1,4 @@
-# 🌍 Foreign Education Consultancy Website
+# 🌍 Foreign Education Consultancy Website (Global Apply Hub)
 
 A modern, fully responsive web application designed for a foreign education consultancy. Built using Next.js and Tailwind CSS, the site helps students explore study-abroad options and contact the consultancy with ease.
 
