@@ -24,6 +24,13 @@ A modern, fully responsive web application designed for a foreign education cons
 
 ---
 
+### Developer
+
+This project was developed by Ayush Sparky.
+GitHub: [https://github.com/Ayush-sparky](https://github.com/Ayush-sparky)
+
+---
+
 ## 🧑‍💻 Getting Started
 
 ### Prerequisites
@@ -37,3 +44,4 @@ A modern, fully responsive web application designed for a foreign education cons
 git clone https://github.com/your-username/consultancy-website.git
 cd consultancy-website
 npm install
+
