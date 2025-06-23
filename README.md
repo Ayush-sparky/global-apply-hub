@@ -24,7 +24,7 @@ A modern, fully responsive web application designed for a foreign education cons
 
 ---
 
-### Developer
+## Developer
 
 This project was developed by Ayush Sparky.
 GitHub: [https://github.com/Ayush-sparky](https://github.com/Ayush-sparky)
