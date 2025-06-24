@@ -1,3 +1,4 @@
+import EducationFooter from "@/components/Footer";
 import NavBar from "@/components/Navbar";
 
 export default function SecondRootLayout({ children }) {
@@ -5,6 +6,7 @@ export default function SecondRootLayout({ children }) {
     <>
       <NavBar />
       {children}
+      <EducationFooter />
     </>
   );
 }
