@@ -12,10 +12,10 @@ import {
 import { RiMenu3Fill } from "react-icons/ri";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
-
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
@@ -41,19 +41,23 @@ const NavBar = () => {
   return (
     <header
       className={`
-        fixed bg-[#0f172a] top-0 left-0 w-full shadow-2xl z-50
+        bg-indigo-700
+        fixed top-0 left-0 w-full shadow-2xl z-50
         transition-transform duration-300 ease-in-out
         ${isVisible ? "translate-y-0" : "-translate-y-full"}
       `}
     >
-      <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-            <CheckCircle className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            TaskFlow Pro
-          </span>
+      <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center min-h-[64px]">
+        {/* Fixed container for logo with explicit dimensions */}
+        <div className="flex-shrink-0 w-[120px] h-[48px] relative">
+          <Image
+            src="/company_transparent_logo.png"
+            fill
+            alt="Company's Logo"
+            className="object-cover"
+            priority
+            sizes="120px"
+          />
         </div>
 
         <ul className="hidden lg:flex space-x-12 items-center justify-center">
@@ -78,7 +82,7 @@ const NavBar = () => {
         </ul>
 
         <Sheet>
-          <SheetTrigger>
+          <SheetTrigger className="flex-shrink-0">
             <RiMenu3Fill className="lg:hidden block w-6 h-6" />
           </SheetTrigger>
           <SheetContent>
@@ -87,7 +91,6 @@ const NavBar = () => {
               <SheetDescription></SheetDescription>
             </SheetHeader>
 
-            {/* Move the nav list outside SheetDescription */}
             <ul className="flex flex-col p-4 space-y-4 mt-4">
               <li>
                 <Link href="/" className="text-lg hover:text-blue-600">
