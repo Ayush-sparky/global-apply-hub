@@ -1,8 +1,7 @@
 "use client";
 
+import { ArrowUpFromDot } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import { ChevronUp } from "lucide-react";
-
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -58,7 +57,7 @@ const ScrollToTopButton = () => {
         onClick={scrollToTop}
         className={`
           fixed bottom-6 right-6 z-50
-          w-14 h-14 rounded-full
+          w-10 h-10 md:w-14 md:h-14 rounded-full
           bg-gradient-to-r from-pink-500 to-rose-500
           text-white shadow-lg
           transition-all duration-300 ease-in-out
@@ -72,10 +71,10 @@ const ScrollToTopButton = () => {
               : "opacity-0 invisible translate-y-5"
           }
         `}
-        title="Back to top"
+        title="scroll to top"
         aria-label="Scroll to top"
       >
-        <ChevronUp className="w-6 h-6 mx-auto" />
+        <ArrowUpFromDot className=" w-4 h-4 md:w-6 md:h-6 mx-auto" />
       </button>
     </>
   );
