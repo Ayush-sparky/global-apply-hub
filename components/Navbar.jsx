@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -11,7 +12,6 @@ import {
 } from "@/components/ui/sheet";
 import { RiMenu3Fill } from "react-icons/ri";
 import Link from "next/link";
-import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 
 const NavBar = () => {
@@ -47,16 +47,15 @@ const NavBar = () => {
         ${isVisible ? "translate-y-0" : "-translate-y-full"}
       `}
     >
-      <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center min-h-[64px]">
+      <nav className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center min-h-[64px]">
         {/* Fixed container for logo with explicit dimensions */}
-        <div className="flex-shrink-0 w-[120px] h-[48px] relative">
+        <div className="flex-shrink-0 w-[150px] h-[60px] md:w-[180px] md:h-[80px] relative">
           <Image
             src="/company_transparent_logo.png"
             fill
             alt="Company's Logo"
             className="object-cover"
             priority
-            sizes="120px"
           />
         </div>
 
@@ -83,7 +82,7 @@ const NavBar = () => {
 
         <Sheet>
           <SheetTrigger className="flex-shrink-0">
-            <RiMenu3Fill className="lg:hidden block w-6 h-6" />
+            <RiMenu3Fill className="lg:hidden block w-7 h-7 md:w-10 md:h-10" />
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
