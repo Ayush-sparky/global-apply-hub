@@ -19,14 +19,13 @@ export default function EducationFooter() {
           {/* Logo and Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <div className="flex-shrink-0 w-[150px] h-[60px] relative">
+              <div className="flex-shrink-0 w-[150px] h-[60px] md:w-[180px] md:h-[80px] relative">
                 <Image
                   src="/company_transparent_logo.png"
                   fill
                   alt="Company's Logo"
                   className="object-cover"
                   priority
-                  sizes="120px"
                 />
               </div>
             </div>
