@@ -6,7 +6,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  GraduationCap,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -204,7 +203,7 @@ export default function EducationFooter() {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                © 2024 EduConsult. All rights reserved. | Transforming futures
+                © {new Date().getFullYear()} EduConsult. All rights reserved. | Transforming futures
                 through education.
               </p>
             </div>

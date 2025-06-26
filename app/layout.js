@@ -1,15 +1,18 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import ScrollToTopButton from "@/components/ScrollToTopBtn";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-source-serif",
+  display: "swap",
 });
 
 export const metadata = {
@@ -19,10 +22,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className="" lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+      <body className={inter.className}>
         {children}
         <ScrollToTopButton />
       </body>
