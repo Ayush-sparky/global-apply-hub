@@ -51,19 +51,19 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         {/* First Section - Description */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Our Services
           </h2>
-          <p className="md:text-lg text-gray-600 leading-relaxed">
+          <p className="md:text-lg text-foreground/80 leading-relaxed">
             From initial consultation and university selection to visa
             assistance and career guidance, the{" "}
-            <span className="font-semibold text-lg text-blue-700">
+            <span className="font-bold text-lg text-blue-500">
               Global ApplyHub Network
-            </span> {' '}
+            </span>{" "}
             is dedicated to supporting you at every step. Trust us to provide
             personalized solutions tailored to your unique aspirations, helping
             you navigate the complexities of international education and make
@@ -78,7 +78,7 @@ export default function ServicesSection() {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-card"
+                className="group hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-card"
               >
                 <CardContent className="p-8 text-center">
                   <div
@@ -91,11 +91,11 @@ export default function ServicesSection() {
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-foreground/80 leading-relaxed text-sm mb-6">
                     {service.description}
                   </p>
 
-                  <div className="flex items-center justify-center text-blue-600 font-medium group-hover:text-blue-700 transition-colors">
+                  <div className="flex items-center justify-center font-medium group-hover:text-blue-700 transition-colors">
                     <span className="text-sm">Learn More</span>
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -118,14 +118,14 @@ export default function ServicesSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-sm md:textlg font-semibold"
               >
                 Get Free Consultation
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold bg-transparent"
+                className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3  text-sm md:textlg font-semibold bg-transparent"
               >
                 View All Services
               </Button>
