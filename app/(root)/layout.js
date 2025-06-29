@@ -5,7 +5,7 @@ export default function SecondRootLayout({ children }) {
   return (
     <>
       <NavBar />
-      <main className=" min-h-screen max-w-7xl mx-auto pt-[76px] md:pt-[100px]">
+      <main className="pt-[76px] md:pt-[92px]">
         {children}
       </main>
       <EducationFooter />

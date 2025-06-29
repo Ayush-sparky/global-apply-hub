@@ -41,7 +41,7 @@ const NavBar = () => {
   return (
     <header
       className={`
-        bg-indigo-700
+        bg-background
         fixed top-0 left-0 w-full shadow-2xl z-50
         transition-transform duration-300 ease-in-out
         ${isVisible ? "translate-y-0" : "-translate-y-full"}
@@ -56,6 +56,7 @@ const NavBar = () => {
             alt="Company's Logo"
             className="object-cover"
             priority
+            sizes="120"
           />
         </div>
 

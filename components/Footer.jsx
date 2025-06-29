@@ -170,8 +170,7 @@ export default function EducationFooter() {
         </div>
       </div>
 
-      {/* Newsletter Section
-      <div className="border-t border-blue-800/30">
+      <div className="border-t border-blue-600/20">
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
@@ -195,7 +194,7 @@ export default function EducationFooter() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-blue-800/30 bg-black/20">

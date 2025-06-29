@@ -1,12 +1,13 @@
+import { ContactSection } from "@/components/sections_pages/ContactEmail";
+import HeroSection from "@/components/sections_pages/Hero";
+import ServicesSection from "@/components/sections_pages/Services";
+
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen">
-        <h1 className=" text-7xl text-red-700">Hello this is the Home Page</h1>
-      </div>
-      <div className=" min-h-screen bg-red-400"></div>
-      <div className=" min-h-screen bg-red-600"></div>
-      <div className=" min-h-screen bg-red-900"></div>
+      <HeroSection />
+      <ServicesSection />
+      <ContactSection />
     </>
   );
 }
