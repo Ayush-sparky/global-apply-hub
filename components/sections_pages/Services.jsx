@@ -55,7 +55,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4 md:px-6">
         {/* First Section - Description */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
             Our Services
           </h2>
           <p className="md:text-lg text-foreground/80 leading-relaxed">

@@ -177,6 +177,14 @@ export function ContactForm() {
         )}
       </div>
 
+      {/* Honeypot field – hidden from users */}
+      <input
+        type="text"
+        name="website"
+        style={{ display: "none" }}
+        autoComplete="off"
+      />
+
       <div className="space-y-2">
         <Label htmlFor="message">Message</Label>
         <Textarea

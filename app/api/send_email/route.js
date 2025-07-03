@@ -1,15 +1,11 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 
-// Simple in-memory store for rate limiting
+// Simple in-memory rate limiter
 const submissions = new Map();
-const RATE_LIMIT = 3; // Max 3 submissions per hour
-const TIME_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
+const RATE_LIMIT = 3;
+const TIME_WINDOW = 60 * 60 * 1000;
 
-// Email validation regex
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-// Check for spam keywords
 const SPAM_KEYWORDS = [
   "viagra",
   "casino",
@@ -22,23 +18,16 @@ const SPAM_KEYWORDS = [
 function validateInput(data) {
   const { name, email, subject, message } = data;
 
-  // Required field validation
   if (!name || !email || !subject || !message) {
     return { valid: false, error: "All fields are required" };
   }
-
-  // Length validation
   if (name.length > 100) return { valid: false, error: "Name too long" };
   if (email.length > 100) return { valid: false, error: "Email too long" };
-  if (message.length > 2000) return { valid: false, error: "Message too long" };
-  if (message.length < 10) return { valid: false, error: "Message too short" };
-
-  // Email format validation
-  if (!EMAIL_REGEX.test(email)) {
+  if (!EMAIL_REGEX.test(email))
     return { valid: false, error: "Invalid email format" };
-  }
+  if (message.length < 10) return { valid: false, error: "Message too short" };
+  if (message.length > 2000) return { valid: false, error: "Message too long" };
 
-  // Spam detection
   const textToCheck = `${name} ${message}`.toLowerCase();
   for (const keyword of SPAM_KEYWORDS) {
     if (textToCheck.includes(keyword)) {
@@ -52,8 +41,6 @@ function validateInput(data) {
 function checkRateLimit(ip) {
   const now = Date.now();
   const userSubmissions = submissions.get(ip) || [];
-
-  // Remove old submissions outside time window
   const recentSubmissions = userSubmissions.filter(
     (time) => now - time < TIME_WINDOW
   );
@@ -65,25 +52,23 @@ function checkRateLimit(ip) {
     };
   }
 
-  // Add current submission
   recentSubmissions.push(now);
   submissions.set(ip, recentSubmissions);
-
   return { allowed: true, remaining: RATE_LIMIT - recentSubmissions.length };
 }
 
 export async function POST(request) {
+  // if (data.website && data.website.trim() !== "") {
+  //   return NextResponse.json({ error: "Bot detected" }, { status: 400 });
+  // }
+
   try {
-    // Get client IP for rate limiting
     const forwarded = request.headers.get("x-forwarded-for");
     const ip = forwarded ? forwarded.split(",")[0] : "unknown";
 
-    // Rate limiting check
     const rateLimitResult = checkRateLimit(ip);
     if (!rateLimitResult.allowed) {
-      const minutesRemaining = Math.ceil(
-        rateLimitResult.remainingTime / (1000 * 60)
-      );
+      const minutesRemaining = Math.ceil(rateLimitResult.remainingTime / 60000);
       return NextResponse.json(
         {
           error: `Too many requests. Try again in ${minutesRemaining} minutes.`,
@@ -95,65 +80,41 @@ export async function POST(request) {
     const data = await request.json();
     const { name, email, subject, message } = data;
 
-    // Input validation
     const validation = validateInput(data);
     if (!validation.valid) {
       return NextResponse.json({ error: validation.error }, { status: 400 });
     }
 
-    // Create transporter - Fixed import issue
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+    // Use Resend API
+    const resendResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        from: "Contact Form <onboarding@resend.dev>",
+        to: [process.env.RECIPIENT_EMAIL],
+        subject: `Contact Form: ${subject}`,
+        html: `
+          <h2>New Contact Message</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>IP:</strong> ${ip}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <p><strong>Message:</strong><br>${message.replace(/\n/g, "<br>")}</p>
+        `,
+      }),
     });
 
-    // Email content with sanitized input
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.RECIPIENT_EMAIL,
-      replyTo: email,
-      subject: `Contact Form: ${subject.substring(0, 100)}`, // Limit subject length
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px;">
-            New Contact Form Submission
-          </h2>
-          
-          <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
-            <p style="margin: 8px 0;"><strong>Name:</strong> ${name.replace(
-              /[<>]/g,
-              ""
-            )}</p>
-            <p style="margin: 8px 0;"><strong>Email:</strong> ${email}</p>
-            <p style="margin: 8px 0;"><strong>Subject:</strong> ${subject.replace(
-              /[<>]/g,
-              ""
-            )}</p>
-            <p style="margin: 8px 0;"><strong>IP:</strong> ${ip}</p>
-          </div>
-          
-          <div style="margin: 20px 0;">
-            <h3 style="color: #333;">Message:</h3>
-            <div style="background-color: #ffffff; padding: 15px; border-left: 4px solid #007bff; border-radius: 3px;">
-              ${message.replace(/[<>]/g, "").replace(/\n/g, "<br>")}
-            </div>
-          </div>
-          
-          <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-          <p style="color: #666; font-size: 14px;">
-            <em>You can reply directly to this email to respond to ${name.replace(
-              /[<>]/g,
-              ""
-            )}</em>
-          </p>
-        </div>
-      `,
-    };
-
-    await transporter.sendMail(mailOptions);
+    if (!resendResponse.ok) {
+      const errorText = await resendResponse.text();
+      console.error("Resend API Error:", errorText);
+      return NextResponse.json(
+        { error: "Failed to send email. Please try again later." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       {
@@ -163,9 +124,7 @@ export async function POST(request) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error sending email:", error);
-
-    // Don't expose internal errors to client
+    console.error("Error in /api/send_email:", error);
     return NextResponse.json(
       { error: "Failed to send email. Please try again later." },
       { status: 500 }
