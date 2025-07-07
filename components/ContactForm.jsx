@@ -62,7 +62,7 @@ export function ContactForm() {
     e.preventDefault();
 
     if (!validateForm()) {
-      setSubmitStatus("Please fix the errors below");
+      setSubmitStatus("Please fix the errors above");
       return;
     }
 
@@ -221,8 +221,8 @@ export function ContactForm() {
 
       <Button
         type="submit"
-        className={`w-full bg-button rounded-xl ${
-          isSubmitting ? "cursor-no-drop" : "cursor-pointer"
+        className={`w-full btn btn-primary ${
+          isSubmitting && "cursor-no-drop"
         }`}
         disabled={isSubmitting}
       >

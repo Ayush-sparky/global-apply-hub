@@ -7,7 +7,9 @@ export function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Get in Touch</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              Get in Touch
+            </h2>
             <p className="text-sm md:text-lg text-foreground/70 max-w-2xl mx-auto">
               Have questions, feedback, or need help? We'd love to hear from
               you. Send us a message and we'll get back to you as soon as
@@ -25,7 +27,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2">Email Support</h3>
-                    <p className="text-foreground text-sm lg:text-lg">
+                    <p className="text-foreground text-sm 2xl:text-lg">
                       Send us an email and we'll respond within 24 hours.
                     </p>
                   </div>
@@ -39,7 +41,7 @@ export function ContactSection() {
                     <h3 className="font-semibold mb-2">
                       Feedback & Suggestions
                     </h3>
-                    <p className="text-foreground text-sm lg:text-lg">
+                    <p className="text-foreground text-sm 2xl:text-lg">
                       Help us improve TaskFlow by sharing your ideas and
                       feedback.
                     </p>
@@ -52,7 +54,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2">Response Time</h3>
-                    <p className="text-foreground text-sm lg:text-lg">
+                    <p className="text-foreground text-sm 2xl:text-lg">
                       We typically respond to all inquiries within 24 hours
                       during business days.
                     </p>
@@ -62,7 +64,7 @@ export function ContactSection() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-card text-foreground rounded-lg p-6">
+            <div className="card p-6">
               <ContactForm />
             </div>
           </div>

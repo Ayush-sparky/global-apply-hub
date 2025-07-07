@@ -78,7 +78,7 @@ export default function ServicesSection() {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-card"
+                className="group hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 border-0 card"
               >
                 <CardContent className="p-8 text-center">
                   <div
@@ -107,26 +107,19 @@ export default function ServicesSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white">
+          <div className="card p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Start Your Educational Journey?
             </h3>
-            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className=" mb-8 max-w-2xl mx-auto">
               Get personalized guidance from our expert counselors and take the
               first step towards your dream education abroad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-sm md:textlg font-semibold"
-              >
+              <Button size="lg" className="btn-primary btn">
                 Get Free Consultation
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3  text-sm md:textlg font-semibold bg-transparent"
-              >
+              <Button size="lg" className="btn-secondary btn">
                 View All Services
               </Button>
             </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 to-blue-100 py-8 md:py-12 lg:py-16">
+    <section className="relative py-8 bg-hero-background md:py-12 lg:py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
           {/* Text Content */}
@@ -17,18 +17,20 @@ export default function HeroSection() {
 
               <h1 className="text-4xl font-bold tracking-tight text-blue-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
                 <span className="block text-blue-600">Global ApplyHub</span>
-                <span className="block text-3xl pt-2 md:pt-4 sm:text-4xl md:text-5xl">Educational Network</span>
+                <span className="block dark:text-blue-600 text-3xl pt-2 md:pt-4 sm:text-4xl md:text-5xl">
+                  Educational Network
+                </span>
               </h1>
 
-              <h2 className="text-xl md:text-2xl font-semibold text-blue-800">
+              <h2 className="text-xl md:text-2xl font-semibold text-blue-800 dark:text-blue-600">
                 Education and Career Counselling Services
               </h2>
 
-              <p className="text-lg text-blue-700 font-medium italic">
+              <p className="text-lg text-blue-700 dark:text-blue-600 font-medium italic">
                 "Serving you for your better future."
               </p>
 
-              <p className="text-base text-gray-600 max-w-lg">
+              <p className="text-base text-foreground/80 max-w-lg">
                 Expert guidance for Nepali students seeking international
                 education opportunities. From university selection to visa
                 assistance, we're here to make your dreams come true.
@@ -36,36 +38,29 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold"
-              >
+              <Button size="lg" className="btn btn-primary">
                 Start Your Journey
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold bg-transparent"
-              >
+              <Button size="lg" className="btn-secondary">
                 Learn More
               </Button>
             </div>
 
             {/* Stats or Features */}
             <div className="flex flex-wrap gap-6 pt-6">
-              <div className="flex items-center gap-2 text-blue-700">
+              <div className="flex items-center gap-2 text-blue-700 dark:text-white">
                 <Users className="h-5 w-5" />
                 <span className="text-sm font-medium">
                   500+ Students Guided
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-700">
+              <div className="flex items-center gap-2 text-blue-700 dark:text-white">
                 <GraduationCap className="h-5 w-5" />
                 <span className="text-sm font-medium">
                   50+ Partner Universities
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-700">
+              <div className="flex items-center gap-2 text-blue-700 dark:text-white">
                 <Globe className="h-5 w-5" />
                 <span className="text-sm font-medium">15+ Countries</span>
               </div>
@@ -101,14 +96,14 @@ export default function HeroSection() {
             <div className="absolute -top-4 -right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg">
               <GraduationCap className="h-6 w-6" />
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-white border-4 border-blue-200 p-3 rounded-full shadow-lg">
+            <div className="absolute -bottom-4 -left-4 bg-white border-4 border-background p-3 rounded-full shadow-lg">
               <Globe className="h-6 w-6 text-blue-600" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Background Pattern */}
+      {/* Background Pattern
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]">
           <svg className="absolute inset-0 h-full w-full" aria-hidden="true">
@@ -132,7 +127,7 @@ export default function HeroSection() {
             />
           </svg>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

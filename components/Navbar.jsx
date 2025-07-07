@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -13,6 +12,7 @@ import {
 import { RiMenu3Fill } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggleButton";
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -40,8 +40,8 @@ const NavBar = () => {
 
   return (
     <header
-      className={`
-        bg-background
+      className={` text-white
+        bg-nav_footer
         fixed top-0 left-0 w-full shadow-2xl z-50
         transition-transform duration-300 ease-in-out
         ${isVisible ? "translate-y-0" : "-translate-y-full"}
@@ -71,7 +71,7 @@ const NavBar = () => {
               href="/dashboard"
               className="hover:text-blue-600 transition-colors"
             >
-              Dashboard
+              Services
             </Link>
           </li>
           <li>
@@ -81,35 +81,44 @@ const NavBar = () => {
           </li>
         </ul>
 
-        <Sheet>
-          <SheetTrigger className="flex-shrink-0">
-            <RiMenu3Fill className="lg:hidden block w-7 h-7 md:w-10 md:h-10" />
-          </SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetTitle>Navigation Menu</SheetTitle>
-              <SheetDescription></SheetDescription>
-            </SheetHeader>
+        <div className=" flex justify-center items-center gap-4 md:gap-6">
+          <ThemeToggle />
 
-            <ul className="flex flex-col p-4 space-y-4 mt-4">
-              <li>
-                <Link href="/" className="text-lg hover:text-blue-600">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/dashboard" className="text-lg hover:text-blue-600">
-                  Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="text-lg hover:text-blue-600">
-                  Help
-                </Link>
-              </li>
-            </ul>
-          </SheetContent>
-        </Sheet>
+          <div className="lg:hidden">
+            <Sheet>
+              <SheetTrigger className="flex-shrink-0">
+                <RiMenu3Fill className="lg:hidden block w-7 h-7 md:w-10 md:h-10" />
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>Navigation Menu</SheetTitle>
+                  <SheetDescription></SheetDescription>
+                </SheetHeader>
+
+                <ul className="flex flex-col p-4 space-y-4 mt-4">
+                  <li>
+                    <Link href="/" className="text-lg hover:text-blue-600">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/dashboard"
+                      className="text-lg hover:text-blue-600"
+                    >
+                      Dashboard
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-lg hover:text-blue-600">
+                      Help
+                    </Link>
+                  </li>
+                </ul>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
       </nav>
     </header>
   );
