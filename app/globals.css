@@ -157,6 +157,10 @@
     @apply shadow-2xl bg-card text-card-foreground rounded-lg
   }
 
+  .banner{
+    @apply bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 inset-shadow-foreground shadow-2xl text-white py-10 lg:py-20
+  }
+
   .btn{
     @apply cursor-pointer text-white rounded-xl hover:bg-button/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold
   }

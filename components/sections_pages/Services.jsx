@@ -9,6 +9,9 @@ import {
   Plane,
   ArrowRight,
 } from "lucide-react";
+import CTAsection from "./CTAsection";
+import Link from "next/link";
+import CallNow from "../cta_buttons/CallNow";
 
 export default function ServicesSection() {
   const services = [
@@ -78,7 +81,7 @@ export default function ServicesSection() {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 border-0 card"
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 card"
               >
                 <CardContent className="p-8 text-center">
                   <div
@@ -95,9 +98,11 @@ export default function ServicesSection() {
                     {service.description}
                   </p>
 
-                  <div className="flex items-center justify-center font-medium group-hover:text-blue-700 transition-colors">
-                    <span className="text-sm">Learn More</span>
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex items-center justify-center cursor-pointer font-medium hover:text-blue-700 transition-colors">
+                    <Link href="/services" className="text-sm">
+                      Learn More
+                    </Link>
+                    <ArrowRight className="ml-2 h-4 w-4 hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
               </Card>
@@ -106,7 +111,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="card p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Start Your Educational Journey?
@@ -124,7 +129,17 @@ export default function ServicesSection() {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
+        <CTAsection
+          title="Ready to Start Your Educational Journey?"
+          desc=" Get personalized guidance from our expert counselors and take the
+              first step towards your dream education abroad."
+        >
+          <CallNow />
+          <Button size="lg" className="btn-secondary btn">
+            View All Services
+          </Button>
+        </CTAsection>
       </div>
     </section>
   );

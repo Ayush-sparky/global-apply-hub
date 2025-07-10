@@ -13,6 +13,8 @@ import { RiMenu3Fill } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggleButton";
+import { linkList } from "./sub_sections/navbar/linkListData";
+import NavLink from "./sub_sections/navbar/NavLink";
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -61,24 +63,9 @@ const NavBar = () => {
         </div>
 
         <ul className="hidden lg:flex space-x-12 items-center justify-center">
-          <li>
-            <Link href="/" className="hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/dashboard"
-              className="hover:text-blue-600 transition-colors"
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-blue-600 transition-colors">
-              Help
-            </Link>
-          </li>
+          {linkList.map((link, index) => (
+            <NavLink key={index} title={link.title} pageLink={link.pageLink} />
+          ))}
         </ul>
 
         <div className=" flex justify-center items-center gap-4 md:gap-6">
@@ -96,24 +83,13 @@ const NavBar = () => {
                 </SheetHeader>
 
                 <ul className="flex flex-col p-4 space-y-4 mt-4">
-                  <li>
-                    <Link href="/" className="text-lg hover:text-blue-600">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/dashboard"
-                      className="text-lg hover:text-blue-600"
-                    >
-                      Dashboard
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/" className="text-lg hover:text-blue-600">
-                      Help
-                    </Link>
-                  </li>
+                  {linkList.map((link, index) => (
+                    <NavLink
+                      key={index}
+                      title={link.title}
+                      pageLink={link.pageLink}
+                    />
+                  ))}
                 </ul>
               </SheetContent>
             </Sheet>
