@@ -1,17 +1,19 @@
 import {
   GraduationCap,
-  FileText,
   StampIcon as Passport,
   DollarSign,
   BookOpen,
   Plane,
+  FileCheck,
+  BookOpenCheck,
+  FileCheck2,
 } from "lucide-react";
 
 export const services = [
   {
     icon: <GraduationCap className="h-8 w-8" />,
-    title: "University Selection & Counseling",
-    desc: "Personalized university matching based on your academic profile, career goals, budget, and preferences. We help you choose the right institution from our network of 500+ partner universities.",
+    title: "Student Profiling",
+    desc: "At Global ApplyHub Network, we provide free counselling sessions to help you accomplish all your overseas study goals. We assist you in identifying the career path that is best for you, ensuring your journey is as smooth as possible – built on trust and confidence",
     checkList: [
       { title: "Academic profile assessment" },
       { title: "University shortlisting" },
@@ -21,9 +23,9 @@ export const services = [
     link: "/contact",
   },
   {
-    icon: <FileText className="h-8 w-8" />,
-    title: "Application Assistance",
-    desc: "Complete application support including document preparation, SOP writing, recommendation letters, and application submission management to maximize your admission chances.",
+    icon: <BookOpenCheck className="h-8 w-8" />,
+    title: "Test Preparation and Test Centre",
+    desc: "We also help students prepare for the English Language Tests needed for admission to colleges and universities in the United Kingdom and Australia. All students must pass standard tests like IELTS, TOEFL, GMAT, GRE, SAT, PTE and OET according to the requirements set by the respective academic institutions.",
     checkList: [
       { title: "Statement of Purpose writing" },
       { title: "Document preparation & verification" },
@@ -33,9 +35,9 @@ export const services = [
     link: "/contact",
   },
   {
-    icon: <Passport className="h-8 w-8" />,
-    title: "Student Visa Processing",
-    desc: "Expert visa guidance with 98% success rate. We handle all aspects of visa processing including document preparation, interview coaching, and application tracking.",
+    icon: <FileCheck className="h-8 w-8" />,
+    title: "Document Verification",
+    desc: "Expert educational consultants at Global ApplyHub Network will carefully review and verify all documents provided by students. Incomplete or incorrect documentation may lead to delays or even rejection of your visa application, so we ensure everything is in perfect order before submission",
     checkList: [
       { title: "Visa document checklist" },
       { title: "Interview preparation" },
@@ -45,9 +47,9 @@ export const services = [
     link: "/visa",
   },
   {
-    icon: <DollarSign className="h-8 w-8" />,
-    title: "Scholarship & Financial Aid",
-    desc: "Comprehensive scholarship guidance to help reduce your education costs. We've helped students secure over $50M in scholarships and financial aid.",
+    icon: <FileCheck2 className="h-8 w-8" />,
+    title: "Application Review and Submission",
+    desc: "We understand that applying to overseas colleges and universities is a pivotal decision that requires a lot of planning, research, and decision-making. It is not simply about filling in an application form.",
     checkList: [
       { title: "Scholarship identification" },
       { title: "Application assistance" },
@@ -58,8 +60,8 @@ export const services = [
   },
   {
     icon: <BookOpen className="h-8 w-8" />,
-    title: "Test Preparation",
-    desc: "Comprehensive test preparation for IELTS, TOEFL, GRE, GMAT, SAT, and other standardized tests with expert trainers and proven study materials.",
+    title: "Interview Preparation",
+    desc: "Global ApplyHub Network’s expert study abroad consultants understand that interviews are a vital part of the admission process. That’s why our experienced professionals are dedicated to thoroughly preparing prospective international students with proven interview techniques and personalized guidance.",
     checkList: [
       { title: "IELTS/TOEFL preparation" },
       { title: "GRE/GMAT coaching" },
@@ -69,9 +71,9 @@ export const services = [
     link: "/contact",
   },
   {
-    icon: <Plane className="h-8 w-8" />,
-    title: "Pre-departure Support",
-    desc: "Comprehensive pre-departure assistance including accommodation arrangements, travel guidance, orientation sessions, and cultural preparation to ensure a smooth transition.",
+    icon: <Passport className="h-8 w-8" />,
+    title: "Visa Assistance",
+    desc: "Our experts provide you with free consultation and assistance on visa conditions and requirements for your new journey. We will make sure that it is stress-free for you when making your visa application and that you are well prepared.",
     checkList: [
       { title: "Accommodation assistance" },
       { title: "Travel & flight booking" },

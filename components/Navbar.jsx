@@ -71,7 +71,7 @@ const NavBar = () => {
         <div className=" flex justify-center items-center gap-4 md:gap-6">
           <ThemeToggle />
 
-          <div className="lg:hidden">
+          <div className="lg:hidden flex justify-center items-center">
             <Sheet>
               <SheetTrigger className="flex-shrink-0">
                 <RiMenu3Fill className="lg:hidden block w-7 h-7 md:w-10 md:h-10" />

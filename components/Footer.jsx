@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function EducationFooter() {
   return (
-    <footer className="bg-nav_footer text-white">
+    <footer className="bg-nav_footer">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -32,7 +32,7 @@ export default function EducationFooter() {
               Empowering students to achieve their academic dreams through
               personalized guidance and expert consultation services.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex text-white space-x-4">
               <a
                 href="#"
                 className="bg-blue-600/20 p-3 rounded-full hover:bg-blue-500/30 transition-all duration-300 hover:scale-110"
@@ -76,7 +76,7 @@ export default function EducationFooter() {
               ].map((service, index) => (
                 <li key={index}>
                   <a
-                    href="#"
+                    href="/services"
                     className="text-gray-300 hover:text-blue-300 transition-colors duration-200 hover:translate-x-1 inline-block"
                   >
                     {service}
@@ -188,7 +188,7 @@ export default function EducationFooter() {
                 placeholder="Enter your email"
                 className="px-4 py-3 bg-white/10 border border-blue-600/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent backdrop-blur-sm sm:w-64"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <button className="btn btn-primary">
                 Subscribe
               </button>
             </div>

@@ -21,13 +21,13 @@ export default function ServicesPage() {
       />
 
       {/* Main Services */}
-      <section className="py-20">
+      <section className="py-10 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold lg:font-extrabold mb-4">
               Complete Study Abroad Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="lg:text-xl text-sm text-foreground/90 max-w-3xl mx-auto">
               Our expert team provides comprehensive support at every stage of
               your international education journey.
             </p>
@@ -56,55 +56,55 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
+            <div className="card text-center">
               <div className="bg-blue-800 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                 1
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+              <h3 className="text-lg font-semibold mb-3">
                 Initial Consultation
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className=" text-sm">
                 Free consultation to understand your goals, assess your profile,
                 and create a personalized roadmap.
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="card text-center">
               <div className="bg-blue-800 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                2
+                1
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                University Selection
+              <h3 className="text-lg font-semibold mb-3">
+                Initial Consultation
               </h3>
-              <p className="text-gray-600 text-sm">
-                Shortlist universities and programs that match your profile,
-                preferences, and career objectives.
+              <p className=" text-sm">
+                Free consultation to understand your goals, assess your profile,
+                and create a personalized roadmap.
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="card text-center">
               <div className="bg-blue-800 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                3
+                1
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                Application & Visa
+              <h3 className="text-lg font-semibold mb-3">
+                Initial Consultation
               </h3>
-              <p className="text-gray-600 text-sm">
-                Complete application assistance followed by expert visa
-                processing and interview preparation.
+              <p className=" text-sm">
+                Free consultation to understand your goals, assess your profile,
+                and create a personalized roadmap.
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="card text-center">
               <div className="bg-blue-800 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                4
+                1
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                Pre-departure
+              <h3 className="text-lg font-semibold mb-3">
+                Initial Consultation
               </h3>
-              <p className="text-gray-600 text-sm">
-                Pre-departure support including accommodation, travel
-                arrangements, and orientation sessions.
+              <p className=" text-xs text-foreground/80">
+                Free consultation to understand your goals, assess your profile,
+                and create a personalized roadmap.
               </p>
             </div>
           </div>
@@ -112,29 +112,25 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Additional Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">Additional Services</h2>
+            <p className="text-sm md:text-lg max-w-3xl mx-auto">
               Specialized services to enhance your international education
               experience and career prospects.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card-surface p-6 rounded-lg shadow-md">
-              <Users className="h-8 w-8 text-blue-800 mb-4" />
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                Career Counseling
-              </h3>
-              <p className="text-gray-600 text-sm mb-4">
+            <div className="card">
+              <Users className="h-8 w-8 mb-4 text-blue-700 dark:text-white" />
+              <h3 className="text-lg font-semibold mb-3">Career Counseling</h3>
+              <p className="text-foreground/90 text-sm mb-4">
                 Professional career guidance to help you choose the right
                 academic path aligned with your career goals and market demands.
               </p>
-              <ul className="text-xs text-gray-600 space-y-1">
+              <ul className="text-xs text-foreground/80 space-y-1">
                 <li>• Career assessment tests</li>
                 <li>• Industry trend analysis</li>
                 <li>• Job market insights</li>
@@ -142,17 +138,17 @@ export default function ServicesPage() {
               </ul>
             </div>
 
-            <div className="card-surface p-6 rounded-lg shadow-md">
-              <BookOpen className="h-8 w-8 text-blue-800 mb-4" />
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+            <div className="card">
+              <BookOpen className="h-8 w-8 text-blue-700 dark:text-white mb-4" />
+              <h3 className="text-lg font-semibold mb-3">
                 Academic Writing Support
               </h3>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-foreground/90 text-sm mb-4">
                 Expert assistance with academic writing including essays,
                 research proposals, and thesis preparation for various academic
                 levels.
               </p>
-              <ul className="text-xs text-gray-600 space-y-1">
+              <ul className="text-xs text-foreground/80 space-y-1">
                 <li>• Essay writing workshops</li>
                 <li>• Research methodology training</li>
                 <li>• Citation and referencing</li>
@@ -160,16 +156,16 @@ export default function ServicesPage() {
               </ul>
             </div>
 
-            <div className="card-surface p-6 rounded-lg shadow-md">
-              <Plane className="h-8 w-8 text-blue-800 mb-4" />
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+            <div className="card">
+              <Plane className="h-8 w-8 text-blue-700 dark:text-white mb-4" />
+              <h3 className="text-lg font-semibold mb-3">
                 Post-arrival Support
               </h3>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-foreground/90 text-sm mb-4">
                 Continued support after you reach your destination including
                 local orientation, banking assistance, and academic guidance.
               </p>
-              <ul className="text-xs text-gray-600 space-y-1">
+              <ul className="text-xs text-foreground/80 space-y-1">
                 <li>• Airport pickup coordination</li>
                 <li>• Bank account opening</li>
                 <li>• Local SIM card assistance</li>

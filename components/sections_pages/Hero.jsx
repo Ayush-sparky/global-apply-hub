@@ -10,23 +10,23 @@ export default function HeroSection() {
           {/* Text Content */}
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800">
+              <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-xs md:text-sm font-medium text-blue-800">
                 <Globe className="mr-2 h-4 w-4" />
                 Trusted Educational Partner
               </div>
 
               <h1 className="text-4xl font-bold tracking-tight text-blue-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                <span className="block text-blue-600">Global ApplyHub</span>
-                <span className="block dark:text-blue-600 text-3xl pt-2 md:pt-4 sm:text-4xl md:text-5xl">
+                <span className="block text-blue-600 dark:text-blue-400">Global ApplyHub</span>
+                <span className="block dark:text-blue-500 text-2xl pt-2 md:pt-4 sm:text-3xl md:text-4xl xl:text-5xl">
                   Educational Network
                 </span>
               </h1>
 
-              <h2 className="text-xl md:text-2xl font-semibold text-blue-800 dark:text-blue-600">
+              <h2 className="text-lg md:text-xl xl:text-2xl font-semibold text-blue-800 dark:text-blue-600">
                 Education and Career Counselling Services
               </h2>
 
-              <p className="text-lg text-blue-700 dark:text-blue-600 font-medium italic">
+              <p className="text-sm lg:text-lg text-blue-700 dark:text-blue-600 font-medium italic">
                 "Serving you for your better future."
               </p>
 

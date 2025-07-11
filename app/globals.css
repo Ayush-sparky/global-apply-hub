@@ -6,10 +6,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-hero-background:var(--hero-background);
+  --color-hero-background: var(--hero-background);
   --color-button: var(--button);
   --color-button-secondary: var(--button-secondary);
   --color-nav_footer: var(--nav_footer);
+  --color-cta: var(--cta);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -50,13 +51,18 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(100% 0.00011 271.152);
-  --hero-background: linear-gradient(to bottom right, oklch(100% 0.00011 271.152), oklch(78.016% 0.11735 297.622));
+  --hero-background: linear-gradient(
+    to bottom right,
+    oklch(100% 0.00011 271.152),
+    oklch(78.016% 0.11735 297.622)
+  );
   --nav_footer: oklch(29.148% 0.16397 270.145);
   --foreground: oklch(0% 0 0);
   --button: oklch(49.338% 0.2837 263.98);
   --button-secondary: oklch(23.608% 0.12124 263.195);
   --card: oklch(100% 0.00011 271.152);
   --card-foreground: oklch(0% 0 0);
+  --cta: oklch(37.633% 0.2298 268.011);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
@@ -82,18 +88,23 @@
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
-   --sidebar-border: oklch(0.922 0 0); 
-   --sidebar-ring: oklch(0.708 0 0); 
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
   --background: oklch(22.869% 0.00309 16.921);
   --foreground: oklch(0.985 0 0);
-  --hero-background: linear-gradient(to bottom right, oklch(22.869% 0.00309 16.921), oklch(34.631% 0.00371 307.978));
+  --hero-background: linear-gradient(
+    to bottom right,
+    oklch(22.869% 0.00309 16.921),
+    oklch(34.631% 0.00371 307.978)
+  );
   --nav_footer: oklch(24.565% 0.00944 285.65);
-  --button: oklch(45.686% 0.25448 263.812);
+  --button: oklch(50.111% 0.28043 263.839);
   --button-secondary: oklch(33.297% 0.02322 196.183);
   --card: oklch(27.685% 0.00003 271.152);
+  --cta: oklch(19.163% 0.13281 264.073);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
@@ -153,23 +164,31 @@
     font-family: var(--font-source-serif), ui-serif, Georgia, serif;
   }
 
-  .card{
-    @apply shadow-2xl bg-card text-card-foreground rounded-lg
+  .card {
+    @apply shadow-2xl bg-card text-card-foreground rounded-lg px-4 py-6;
   }
 
-  .banner{
-    @apply bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 inset-shadow-foreground shadow-2xl text-white py-10 lg:py-20
+  .banner {
+    @apply bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-10 lg:py-20;
   }
 
-  .btn{
-    @apply cursor-pointer text-white rounded-xl hover:bg-button/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold
+  .btn {
+    @apply cursor-pointer text-white rounded-xl hover:bg-button/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold;
   }
 
-  .btn-primary{
-    @apply bg-button
+  .btn-primary {
+    @apply bg-button;
   }
 
-  .btn-secondary{
-    @apply bg-button-secondary cursor-pointer text-white rounded-xl hover:bg-button-secondary/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold
+  .btn-secondary {
+    @apply bg-button-secondary cursor-pointer text-white rounded-xl hover:bg-button-secondary/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold;
+  }
+
+  .cta-btn {
+    @apply flex justify-center items-center gap-4;
+  }
+
+  .cta-icons {
+    @apply w-5 h-5;
   }
 }

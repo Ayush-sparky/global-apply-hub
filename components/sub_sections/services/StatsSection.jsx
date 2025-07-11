@@ -11,12 +11,12 @@ export function StatsSection() {
   ];
 
   return (
-    <section className="py-16 bg-white border-b">
+    <section className="py-8 lg:py-16">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 card">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+              <div className="text-2xl md:text-3xl xl:text-4xl font-bold text-blue-600 dark:text-foreground mb-2">
                 <CountUp
                   start={0}
                   end={stat.number}
