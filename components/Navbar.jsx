@@ -15,6 +15,7 @@ import Image from "next/image";
 import ThemeToggle from "./ThemeToggleButton";
 import { linkList } from "./sub_sections/navbar/linkListData";
 import NavLink from "./sub_sections/navbar/NavLink";
+import CallNow from "./cta_buttons/CallNow";
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -82,15 +83,19 @@ const NavBar = () => {
                   <SheetDescription></SheetDescription>
                 </SheetHeader>
 
-                <ul className="flex flex-col p-4 space-y-4 mt-4">
-                  {linkList.map((link, index) => (
-                    <NavLink
-                      key={index}
-                      title={link.title}
-                      pageLink={link.pageLink}
-                    />
-                  ))}
-                </ul>
+                <div className=" flex flex-col h-screen p-4 justify-between">
+                  <ul className="flex flex-col  space-y-4">
+                    {linkList.map((link, index) => (
+                      <NavLink
+                        key={index}
+                        title={link.title}
+                        pageLink={link.pageLink}
+                      />
+                    ))}
+                  </ul>
+
+                    <CallNow classProp="border cta-btn mt-4 dark:border-white border-black text-foreground btn" />
+                </div>
               </SheetContent>
             </Sheet>
           </div>

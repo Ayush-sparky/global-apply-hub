@@ -9,6 +9,8 @@
   --color-hero-background: var(--hero-background);
   --color-button: var(--button);
   --color-button-secondary: var(--button-secondary);
+  --color-cta-button: var(--cta-button);
+  --color-cta-button-secondary: var(--cta-button-secondary);
   --color-nav_footer: var(--nav_footer);
   --color-cta: var(--cta);
   --font-sans: var(--font-geist-sans);
@@ -63,6 +65,8 @@
   --card: oklch(100% 0.00011 271.152);
   --card-foreground: oklch(0% 0 0);
   --cta: oklch(37.633% 0.2298 268.011);
+  --cta-button: oklch(72.702% 0.2469 142.567);
+  --cta-button-secondary: oklch(58.331% 0.19775 142.62);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
@@ -105,6 +109,8 @@
   --button-secondary: oklch(33.297% 0.02322 196.183);
   --card: oklch(27.685% 0.00003 271.152);
   --cta: oklch(19.163% 0.13281 264.073);
+  --cta-button:rgb(0, 168, 3);
+  --cta-button-secondary: oklch(50.514% 0.17123 142.623);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
@@ -169,11 +175,12 @@
   }
 
   .banner {
-    @apply bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-10 lg:py-20;
+    @apply bg-gradient-to-bl from-blue-900 via-blue-800 to-blue-900
+     text-white py-10 lg:py-20 dark:bg-gradient-to-bl dark:from-indigo-950 dark:via-blue-800 dark:to-blue-950;
   }
 
   .btn {
-    @apply cursor-pointer text-white rounded-xl hover:bg-button/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold;
+    @apply cursor-pointer rounded-xl hover:bg-button/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold;
   }
 
   .btn-primary {
@@ -185,7 +192,11 @@
   }
 
   .cta-btn {
-    @apply flex justify-center items-center gap-4;
+    @apply flex justify-center items-center gap-4 bg-cta-button;
+  }
+
+  .cta-btn-secondary {
+    @apply bg-cta-button-secondary flex justify-center items-center gap-4;
   }
 
   .cta-icons {

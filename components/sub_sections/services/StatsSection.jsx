@@ -27,7 +27,7 @@ export function StatsSection() {
                   scrollSpyDelay={index * 200} // Stagger the animations
                 />
               </div>
-              <div className="text-muted-foreground font-medium">
+              <div className="text-muted-foreground text-xs md:text-sm xl:text-lg font-medium">
                 {stat.label}
               </div>
             </div>

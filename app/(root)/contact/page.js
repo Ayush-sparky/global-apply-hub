@@ -21,8 +21,8 @@ export default function ContactPage() {
         title="Have any sort of queries in mind?"
         desc="Feel free to call us anytime when in doubt"
       >
-        <EmailUs />
-        <CallNow />
+        <EmailUs classProp='btn cta-btn cta-btn-secondary' />
+        <CallNow classProp='btn cta-btn btn-primary' />
       </CTAsection>
     </div>
   );
