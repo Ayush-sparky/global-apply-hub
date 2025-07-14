@@ -55,7 +55,7 @@ export default function ServicesSection() {
 
   return (
     <section className="py-8 md:py-16">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* First Section - Description */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
@@ -117,8 +117,8 @@ export default function ServicesSection() {
         desc=" Get personalized guidance from our expert counselors and take the
               first step towards your dream education abroad."
       >
-        <CallNow />
-        <Link href="/services" className="btn-secondary btn cta-btn">
+        <CallNow classProp='btn cta-btn cta-btn-primary' />
+        <Link href="/services" className="btn-secondary btn">
           View All Services
         </Link>
       </CTAsection>

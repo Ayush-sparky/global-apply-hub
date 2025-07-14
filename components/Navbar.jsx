@@ -53,14 +53,16 @@ const NavBar = () => {
       <nav className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center min-h-[64px]">
         {/* Fixed container for logo with explicit dimensions */}
         <div className="flex-shrink-0 w-[150px] h-[60px] md:w-[180px] md:h-[80px] relative">
-          <Image
-            src="/company_transparent_logo.png"
-            fill
-            alt="Company's Logo"
-            className="object-cover"
-            priority
-            sizes="120"
-          />
+          <Link href="/">
+            <Image
+              src="/company_transparent_logo.png"
+              fill
+              alt="Company's Logo"
+              className="object-cover"
+              priority
+              sizes="120"
+            />
+          </Link>
         </div>
 
         <ul className="hidden lg:flex space-x-12 items-center justify-center">
@@ -94,7 +96,7 @@ const NavBar = () => {
                     ))}
                   </ul>
 
-                    <CallNow classProp="border cta-btn mt-4 dark:border-white border-black text-foreground btn" />
+                  <CallNow classProp="border cta-btn mt-4 dark:border-white border-black text-foreground btn" />
                 </div>
               </SheetContent>
             </Sheet>

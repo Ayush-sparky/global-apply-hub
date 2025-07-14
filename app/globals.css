@@ -65,7 +65,7 @@
   --card: oklch(100% 0.00011 271.152);
   --card-foreground: oklch(0% 0 0);
   --cta: oklch(37.633% 0.2298 268.011);
-  --cta-button: oklch(72.702% 0.2469 142.567);
+  --cta-button: oklch(75.649% 0.25683 142.578);
   --cta-button-secondary: oklch(58.331% 0.19775 142.62);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -109,8 +109,8 @@
   --button-secondary: oklch(33.297% 0.02322 196.183);
   --card: oklch(27.685% 0.00003 271.152);
   --cta: oklch(19.163% 0.13281 264.073);
-  --cta-button:rgb(0, 168, 3);
-  --cta-button-secondary: oklch(50.514% 0.17123 142.623);
+  --cta-button:rgb(0, 151, 3);
+  --cta-button-secondary: oklch(45.758% 0.14354 143.003);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
@@ -180,23 +180,23 @@
   }
 
   .btn {
-    @apply cursor-pointer rounded-xl hover:bg-button/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold;
+    @apply cursor-pointer flex justify-center items-center rounded-xl text-white active:scale-95  px-6 py-3 lg:px-8 text-xs lg:text-sm xl:py-4 font-semibold;
   }
 
   .btn-primary {
-    @apply bg-button;
+    @apply bg-button hover:bg-button/90;
   }
 
   .btn-secondary {
-    @apply bg-button-secondary cursor-pointer text-white rounded-xl hover:bg-button-secondary/80 active:scale-95  px-8 py-3 text-xs lg:text-sm font-semibold;
+    @apply bg-button-secondary hover:bg-button-secondary/90;
   }
 
   .cta-btn {
-    @apply flex justify-center items-center gap-4 bg-cta-button;
+    @apply flex justify-center items-center gap-4 bg-cta-button hover:bg-cta-button/90;
   }
 
   .cta-btn-secondary {
-    @apply bg-cta-button-secondary flex justify-center items-center gap-4;
+    @apply bg-cta-button-secondary flex justify-center items-center gap-4 hover:bg-cta-button-secondary/90;
   }
 
   .cta-icons {

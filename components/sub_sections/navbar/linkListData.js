@@ -4,16 +4,12 @@ export const linkList = [
     pageLink: "/",
   },
   {
-    title: "Services",
-    pageLink: "/services",
-  },
-  {
-    title: "Contact",
-    pageLink: "/contact",
-  },
-  {
     title: "About us",
     pageLink: "/about",
+  },
+  {
+    title: "Services",
+    pageLink: "/services",
   },
   {
     title: "Visa",
@@ -22,5 +18,9 @@ export const linkList = [
   {
     title: "Universities",
     pageLink: "/universities",
+  },
+  {
+    title: "Contact",
+    pageLink: "/contact",
   },
 ];

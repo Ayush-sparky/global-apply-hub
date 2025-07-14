@@ -1,11 +1,13 @@
-import { Button } from "@/components/ui/button";
 import { GraduationCap, Globe, Users } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import ContactUsBtn from "../cta_buttons/ContactUsBtn";
+import AboutUsBtn from "../cta_buttons/AboutUs";
 
 export default function HeroSection() {
   return (
-    <section className="relative py-8 bg-hero-background md:py-12 lg:py-16">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="relative py-8 bg-hero-background md:py-8 lg:py-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
           {/* Text Content */}
           <div className="flex flex-col justify-center space-y-6">
@@ -16,7 +18,9 @@ export default function HeroSection() {
               </div>
 
               <h1 className="text-4xl font-bold tracking-tight text-blue-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                <span className="block text-blue-600 dark:text-blue-400">Global ApplyHub</span>
+                <span className="block text-blue-600 dark:text-blue-400">
+                  Global ApplyHub
+                </span>
                 <span className="block dark:text-blue-500 text-2xl pt-2 md:pt-4 sm:text-3xl md:text-4xl xl:text-5xl">
                   Educational Network
                 </span>
@@ -38,12 +42,8 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="btn btn-primary">
-                Start Your Journey
-              </Button>
-              <Button size="lg" className="btn-secondary">
-                Learn More
-              </Button>
+              <ContactUsBtn classProp='btn-primary' title="Start your journey" />
+              <AboutUsBtn classProp='btn-secondary' title="Learn More" />
             </div>
 
             {/* Stats or Features */}
@@ -102,32 +102,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* Background Pattern
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]">
-          <svg className="absolute inset-0 h-full w-full" aria-hidden="true">
-            <defs>
-              <pattern
-                id="hero-pattern"
-                width="200"
-                height="200"
-                x="50%"
-                y="-1"
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <rect
-              width="100%"
-              height="100%"
-              strokeWidth="0"
-              fill="url(#hero-pattern)"
-            />
-          </svg>
-        </div>
-      </div> */}
     </section>
   );
 }

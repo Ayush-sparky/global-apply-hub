@@ -13,7 +13,7 @@ export default function EducationFooter() {
   return (
     <footer className="bg-nav_footer">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-8 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo and Company Info */}
           <div className="lg:col-span-1">
@@ -25,6 +25,7 @@ export default function EducationFooter() {
                   alt="Company's Logo"
                   className="object-cover"
                   priority
+                  sizes="120"
                 />
               </div>
             </div>
