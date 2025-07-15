@@ -1,5 +1,10 @@
 import PageBanner from "@/components/PageBanner";
 
+export const metadata = {
+  title: "About Us",
+  description: "We are Nepal's top Foreign Eduaction Consultancy",
+};
+
 export default function AboutPage() {
   return (
     <div className=" bg-background">

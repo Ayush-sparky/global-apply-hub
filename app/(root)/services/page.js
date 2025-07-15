@@ -1,11 +1,15 @@
 import AboutUsBtn from "@/components/cta_buttons/AboutUs";
+import ContactUsBtn from "@/components/cta_buttons/ContactUsBtn";
 import PageBanner from "@/components/PageBanner";
 import CTAsection from "@/components/sections_pages/CTAsection";
 import MainServiceCard from "@/components/sub_sections/services/MainServiceCard";
 import { services } from "@/components/sub_sections/services/mainServicesData";
 import { StatsSection } from "@/components/sub_sections/services/StatsSection";
 import { BookOpen, Plane, Users } from "lucide-react";
-import Link from "next/link";
+
+export const metadata = {
+  title:'Our Services'
+}
 
 export default function ServicesPage() {
   return (
@@ -47,11 +51,11 @@ export default function ServicesPage() {
       <StatsSection />
 
       {/* Service Process */}
-      <section className="py-20">
+      <section className="py-10 lg:py-14 xl:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Our Service Process</h2>
-            <p className="text-xl max-w-3xl mx-auto">
+            <p className="text-sm md:text-lg max-w-3xl mx-auto">
               A systematic approach to ensure your success at every step of your
               international education journey.
             </p>
@@ -114,7 +118,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-20">
+      <section className="py-10 lg:py-14 xl:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Additional Services</h2>
@@ -184,10 +188,8 @@ export default function ServicesPage() {
         desc=" Book a free consultation with our expert counselors to discuss your
             study abroad plans and get personalized guidance."
       >
-        <Link href="/contact" className="btn cta-btn">
-          Book Free Consultation
-        </Link>
-        <AboutUsBtn title="Learn About Us" />
+        <ContactUsBtn classProp="cta-btn " title="Book Free Consultation" />
+        <AboutUsBtn classProp="cta-btn-secondary" title="Learn About Us" />
       </CTAsection>
     </div>
   );

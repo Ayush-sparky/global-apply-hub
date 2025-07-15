@@ -61,11 +61,11 @@
   --nav_footer: oklch(29.148% 0.16397 270.145);
   --foreground: oklch(0% 0 0);
   --button: oklch(49.338% 0.2837 263.98);
-  --button-secondary: oklch(23.608% 0.12124 263.195);
+  --button-secondary: oklch(35.211% 0.19498 263.776);
   --card: oklch(100% 0.00011 271.152);
   --card-foreground: oklch(0% 0 0);
-  --cta: oklch(37.633% 0.2298 268.011);
-  --cta-button: oklch(75.649% 0.25683 142.578);
+  --cta: oklch(33.831% 0.19022 270.158);
+  --cta-button: oklch(70.54% 0.23952 142.573);
   --cta-button-secondary: oklch(58.331% 0.19775 142.62);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -108,7 +108,7 @@
   --button: oklch(50.111% 0.28043 263.839);
   --button-secondary: oklch(33.297% 0.02322 196.183);
   --card: oklch(27.685% 0.00003 271.152);
-  --cta: oklch(19.163% 0.13281 264.073);
+  --cta: oklch(29.313% 0.00003 271.152);
   --cta-button:rgb(0, 151, 3);
   --cta-button-secondary: oklch(45.758% 0.14354 143.003);
   --card-foreground: oklch(0.985 0 0);
@@ -180,7 +180,7 @@
   }
 
   .btn {
-    @apply cursor-pointer flex justify-center items-center rounded-xl text-white active:scale-95  px-6 py-3 lg:px-8 text-xs lg:text-sm xl:py-4 font-semibold;
+    @apply cursor-pointer flex justify-center items-center rounded-xl text-white active:scale-95 duration-200  px-6 py-3 lg:px-8 text-xs lg:text-sm xl:py-4 font-semibold;
   }
 
   .btn-primary {
@@ -196,7 +196,7 @@
   }
 
   .cta-btn-secondary {
-    @apply bg-cta-button-secondary flex justify-center items-center gap-4 hover:bg-cta-button-secondary/90;
+    @apply flex justify-center items-center gap-4 bg-cta hover:bg-cta/70 hover:border-white border-2 border-gray-300;
   }
 
   .cta-icons {

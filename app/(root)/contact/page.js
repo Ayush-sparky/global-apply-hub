@@ -3,6 +3,11 @@ import EmailUs from "@/components/cta_buttons/EmailUs";
 import PageBanner from "@/components/PageBanner";
 import CTAsection from "@/components/sections_pages/CTAsection";
 
+export const metadata = {
+  title: 'Contact Us',
+  description: 'Feel free to reach out to us anytime via call, email or message'
+}
+
 export default function ContactPage() {
   return (
     <div className=" bg-background">

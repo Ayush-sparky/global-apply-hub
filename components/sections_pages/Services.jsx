@@ -118,7 +118,7 @@ export default function ServicesSection() {
               first step towards your dream education abroad."
       >
         <CallNow classProp='btn cta-btn cta-btn-primary' />
-        <Link href="/services" className="btn-secondary btn">
+        <Link href="/services" className="cta-btn-secondary btn">
           View All Services
         </Link>
       </CTAsection>
