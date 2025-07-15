@@ -13,11 +13,28 @@ const ScrollToTopButton = () => {
     }
   };
 
+  // Custom smooth scroll: starts slow, then speeds up
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    const startY = window.pageYOffset;
+    const duration = 2000; // ms
+    const startTime = performance.now();
+
+    function easeInOut(t) {
+      // Slow start, fast end (cubic)
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function animateScroll(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOut(progress);
+      const newY = startY * (1 - eased);
+      window.scrollTo(0, newY);
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    }
+    requestAnimationFrame(animateScroll);
   };
 
   useEffect(() => {
