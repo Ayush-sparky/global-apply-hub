@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -16,6 +17,7 @@ import ThemeToggle from "./ThemeToggleButton";
 import { linkList } from "./sub_sections/navbar/linkListData";
 import NavLink from "./sub_sections/navbar/NavLink";
 import CallNow from "./cta_buttons/CallNow";
+import { X } from "lucide-react";
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -81,9 +83,14 @@ const NavBar = () => {
               </SheetTrigger>
               <SheetContent className="bg-nav_footer text-white border-0">
                 <SheetHeader>
-                  <SheetTitle className="text-white font-medium">Menu</SheetTitle>
+                  <SheetTitle className="text-white font-thin text-lg">
+                    Menu
+                  </SheetTitle>
                   <SheetDescription></SheetDescription>
                 </SheetHeader>
+                <SheetClose className=" absolute top-5 right-4">
+                  <X />
+                </SheetClose>
 
                 <div className=" flex flex-col h-screen p-4 justify-between">
                   <ul className="flex flex-col  space-y-4">
@@ -97,29 +104,6 @@ const NavBar = () => {
                   </ul>
 
                   <CallNow classProp="border cta-btn mt-4 dark:border-white border-black text-foreground btn" />
-                  {/* Custom close button */}
-                  <button
-                    type="button"
-                    className="absolute top-2 right-4 text-white bg-transparent hover:text-blue-400 p-2 rounded-full"
-                    onClick={() => document.activeElement.blur()}
-                    data-slot="custom-sheet-close"
-                  >
-                    <span className="sr-only">Close</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
                 </div>
               </SheetContent>
             </Sheet>
