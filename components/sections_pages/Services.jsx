@@ -61,10 +61,10 @@ export default function ServicesSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
             Our Services
           </h2>
-          <p className="md:text-lg text-foreground/80 leading-relaxed">
+          <p className="md:text-lg text-sm text-foreground/80 leading-relaxed">
             From initial consultation and university selection to visa
             assistance and career guidance, the{" "}
-            <span className="font-bold text-lg text-blue-500">
+            <span className="font-bold text-sm md:text-lg text-blue-700 dark:text-blue-500">
               Global ApplyHub Network
             </span>{" "}
             is dedicated to supporting you at every step. Trust us to provide
