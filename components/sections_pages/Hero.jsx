@@ -1,6 +1,5 @@
 import { GraduationCap, Globe, Users } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import ContactUsBtn from "../cta_buttons/ContactUsBtn";
 import AboutUsBtn from "../cta_buttons/AboutUs";
 
@@ -42,8 +41,10 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <ContactUsBtn classProp='btn-primary' title="Start your journey" />
-              <AboutUsBtn classProp='btn-secondary' title="Learn More" />
+              <ContactUsBtn classProp="btn-primary">
+                Start your journey
+              </ContactUsBtn>
+              <AboutUsBtn classProp="btn-secondary" title="Learn More" />
             </div>
 
             {/* Stats or Features */}
@@ -71,7 +72,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/GraduatedPic.jpg"
+                src="/2.png"
                 alt="Students celebrating graduation - Global education success"
                 width={500}
                 height={600}
@@ -81,11 +82,11 @@ export default function HeroSection() {
               {/* Overlay with additional info */}
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4">
-                  <p className="text-sm font-semibold text-blue-900">
+                <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                  <p className="text-xs md:text-sm font-semibold text-blue-900">
                     🎓 Your Gateway to Global Education
                   </p>
-                  <p className="text-xs text-gray-600 mt-1">
+                  <p className="text-[10px] md:text-xs text-gray-600 mt-1">
                     Comprehensive support from application to graduation
                   </p>
                 </div>

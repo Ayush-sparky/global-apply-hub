@@ -184,19 +184,19 @@
   }
 
   .btn-primary {
-    @apply bg-button hover:bg-button/90;
+    @apply bg-button hover:bg-button/80;
   }
 
   .btn-secondary {
-    @apply bg-button-secondary hover:bg-button-secondary/90;
+    @apply bg-button-secondary hover:bg-button-secondary/80;
   }
 
   .cta-btn {
-    @apply flex justify-center items-center gap-4 bg-cta-button hover:bg-cta-button/90;
+    @apply flex justify-center items-center gap-4 bg-cta-button hover:bg-cta-button/80;
   }
 
   .cta-btn-secondary {
-    @apply flex justify-center items-center gap-4 bg-cta hover:bg-cta/70 hover:border-white border-2 border-gray-300;
+    @apply flex justify-center items-center gap-4 bg-cta hover:text-cta hover:bg-white border-2 border-white hover:border-cta;
   }
 
   .cta-icons {

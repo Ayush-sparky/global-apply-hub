@@ -188,7 +188,7 @@ export default function ServicesPage() {
         desc=" Book a free consultation with our expert counselors to discuss your
             study abroad plans and get personalized guidance."
       >
-        <ContactUsBtn classProp="cta-btn " title="Book Free Consultation" />
+        <ContactUsBtn classProp="cta-btn">Book Free Consultation</ContactUsBtn>
         <AboutUsBtn classProp="cta-btn-secondary" title="Learn About Us" />
       </CTAsection>
     </div>

@@ -124,14 +124,14 @@ export default function EducationFooter() {
               <div className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300">info@educonsult.com</p>
+                  <p className="text-gray-300"> globalapplyhub@gmail.com </p>
                   <p className="text-gray-400 text-sm">24/7 Support</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+44 20 07402781381</p>
                   <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM</p>
                 </div>
               </div>
@@ -142,27 +142,10 @@ export default function EducationFooter() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 font-medium">New York Office</p>
-                  <p className="text-gray-400 text-sm">
-                    123 Education Ave, NY 10001
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
-                <div>
                   <p className="text-gray-300 font-medium">London Office</p>
                   <p className="text-gray-400 text-sm">
-                    456 Academic St, London EC1A 1BB
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300 font-medium">Sydney Office</p>
-                  <p className="text-gray-400 text-sm">
-                    789 University Rd, Sydney NSW 2000
+                    228 De Havilland Road; Edgware, London, United Kingdom, HA8
+                    5QD
                   </p>
                 </div>
               </div>
@@ -189,9 +172,7 @@ export default function EducationFooter() {
                 placeholder="Enter your email"
                 className="px-4 py-3 bg-white/10 border border-blue-600/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent backdrop-blur-sm sm:w-64"
               />
-              <button className="btn btn-primary">
-                Subscribe
-              </button>
+              <button className="btn btn-primary">Subscribe</button>
             </div>
           </div>
         </div>
@@ -203,8 +184,8 @@ export default function EducationFooter() {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                © {new Date().getFullYear()} EduConsult. All rights reserved. | Transforming futures
-                through education.
+                © {new Date().getFullYear()} EduConsult. All rights reserved. |
+                Transforming futures through education.
               </p>
             </div>
             <div className="flex space-x-6">
