@@ -204,7 +204,7 @@ export default function UniversityPage() {
             for your profile and guide you through the entire application
             process."
       >
-        <ContactUsBtn classProp="btn cta-btn">
+        <ContactUsBtn classProp=" cta-btn">
           Start Your Application
         </ContactUsBtn>
         <Link href="/services" className="btn cta-btn-secondary">
