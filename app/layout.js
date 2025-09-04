@@ -21,6 +21,9 @@ export const metadata = {
     default: "Global ApplyHub",
   },
   description: "Your final destination for international education",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
