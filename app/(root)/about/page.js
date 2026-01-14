@@ -10,7 +10,7 @@ export default function AboutPage() {
     <div className=" bg-background">
       <PageBanner
         title="About us"
-        subtitle="We are Nepal's no.1 consultancy"
+        subtitle="Opening global doors for Nepal’s future leaders"
         desc="From initial consultation and university selection to visa
               assistance and career guidance, our dedicated team is here to
               support you at every step. Trust us to provide personalized

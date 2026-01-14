@@ -11,7 +11,7 @@ export default function VisaPage() {
     <div className=" bg-background">
       <PageBanner
         title="Visa Programs"
-        subtitle="We are Nepal's no.1 consultancy"
+        subtitle="Making your student visa process clear, confident, and successful"
         desc="From initial consultation and university selection to visa
               assistance and career guidance, our dedicated team is here to
               support you at every step. Trust us to provide personalized
