@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function SuccessStoriesPage() {
   return (
     <div>
-      <PageBanner
+      {/* <PageBanner
         title=" Success Stories"
         subtitle="Real stories from students who achieved their international
             education dreams with our guidance and support."
@@ -29,7 +29,8 @@ export default function SuccessStoriesPage() {
         <Link href="/services" className="btn cta-btn-secondary">
           Explore Our Services
         </Link>
-      </CTAsection>
+      </CTAsection> */}
+      <h1>Under Construction</h1>
     </div>
   );
 }

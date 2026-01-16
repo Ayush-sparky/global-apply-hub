@@ -23,8 +23,8 @@ export const linkList = [
     title: "Contact",
     pageLink: "/contact",
   },
-  {
-    title: "Success Stories",
-    pageLink: "/success_stories",
-  },
+  // {
+  //   title: "Success Stories",
+  //   pageLink: "/success_stories",
+  // },
 ];

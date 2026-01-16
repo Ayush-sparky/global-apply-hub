@@ -58,7 +58,7 @@
     oklch(100% 0.00011 271.152),
     oklch(78.016% 0.11735 297.622)
   );
-  --nav_footer: oklch(29.148% 0.16397 270.145);
+  --nav_footer: #813787;
   --foreground: oklch(0% 0 0);
   --button: oklch(49.338% 0.2837 263.98);
   --button-secondary: oklch(35.211% 0.19498 263.776);
